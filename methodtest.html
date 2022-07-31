@@ -8,7 +8,14 @@
     <title>Method Test</title>
 
     <link rel="stylesheet" media="screen" href="commonstyle.css" type="text/css" />
+    <script src="./methodTest.js"></script>
 
+    <style>
+        main {
+            padding:2rem;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -22,6 +29,53 @@
         </nav>
         <hr/>
     </header>
+
+    <main>
+        <form id="hw5-form">
+            <label for="id"> ID </label>
+            <input id="id" name="id" type="number" required/>
+            <br/>
+
+            <labe for="article-name"> Article Name </label>
+            <input id="article-name" name="article-name" required />
+            <br/>
+            <br/>
+
+            <label for="article-body"> Article Body </label>
+            <textarea id="article-body" name="article-body" cols="30" rows="10" required ></textarea>
+        </form>
+
+        <br/>
+        <br/>
+
+        <button id="post" type="submit" form="hw5-form">post</button>
+        <button id="get" type="submit" form="hw5-form">get</button>
+        <button id="put" type="submit" form="hw5-form">put</button>
+        <button id="delete" type="submit" form="hw5-form">delete</button>
+        <br/>
+        <br/>
+
+        <h2> The response is: </h2>
+        <br/>
+        <output>
+            <pre id="response-output"></pre>
+        </output>
+        
+    </main>
+
+    <footer>
+        <my-icons>
+            <a href="https://github.com/AadharSharma7" target="_blank" title="Go to Github">
+                <img src="imgs/github_icon.png" alt="Link to Github" width="35">
+            </a>
+            <a href="#" title="Go to Email">
+                <img src="imgs/email_icon.png" alt="Link to Email" width="35">
+            </a>
+            <a href="https://www.linkedin.com/in/aadhar-sharma-4089b519b/" target="_blank" title="Go to LinkedIn">
+                <img src="imgs/linkedin_icon.png" alt="Link to LinkedIn" width="35">
+            </a>
+        </my-icons>
+    </footer>
     
 </body>
 </html>
