@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Method Test</title>
+    <title>Web Component</title>
 
     <link rel="stylesheet" media="screen" href="commonstyle.css" type="text/css" />
-    <script src="./methodTest.js"></script>
-
+    <script src="./ButtonCount.js"></script>
     <style>
-        main {
-            padding:2rem;
+        button-count {
+            padding: 2rem;
         }
 
+        main {
+            height: 100vh;
+        }
     </style>
 </head>
 
 <body>
+
     <header>
         <nav>
             <a href="/index.html" title="home page">HOME</a>
@@ -32,36 +34,10 @@
     </header>
 
     <main>
-        <form id="hw5-form">
-            <label for="id"> ID </label>
-            <input id="id" name="id" type="number" required/>
-            <br/>
+        <button-count id="btn1"></button-count>
+        <button-count id="btn2"></button-count>
+        <button-count id="btn3"></button-count>
 
-            <labe for="article-name"> Article Name </label>
-            <input id="article-name" name="article-name" required />
-            <br/>
-            <br/>
-
-            <label for="article-body"> Article Body </label>
-            <textarea id="article-body" name="article-body" cols="30" rows="10" required ></textarea>
-        </form>
-
-        <br/>
-        <br/>
-
-        <button id="post" type="submit" form="hw5-form">post</button>
-        <button id="get" type="submit" form="hw5-form">get</button>
-        <button id="put" type="submit" form="hw5-form">put</button>
-        <button id="delete" type="submit" form="hw5-form">delete</button>
-        <br/>
-        <br/>
-
-        <h2> The response is: </h2>
-        <br/>
-        <output>
-            <pre id="response-output"></pre>
-        </output>
-        
     </main>
 
     <footer>
@@ -79,4 +55,5 @@
     </footer>
     
 </body>
+
 </html>

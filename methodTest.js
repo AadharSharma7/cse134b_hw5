@@ -18,16 +18,17 @@ function sendRequest(event) {
         return;
     }
 
+
     console.log(`Resquest: ${requestType} \t link: ${linkAndReq}`);
     req.open(requestType, linkAndReq);
+    req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     let id = document.getElementById('id').value;
     let articleName = document.getElementById('article-name').value;
     let articleBody = document.getElementById('article-body').value;
     let form = document.getElementById('hw5-form');
-    let data = 'id='+id+'&articleName='+articleName+'&articleBody='+articleBody+'&date='+date;
+    let data = 'id='+id+'&article='+articleName+'&body='+articleBody+'&date='+date;
 
-    req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     req.send(data);
     form.reset();
     linkAndReq = 'https://httpbin.org/';
